@@ -18,9 +18,10 @@ const BookDetails = () => {
     setLoading(true);
     async function getBookDetails(){
       try{
+        console.log(id);
         const response = await fetch(`${URL}${id}.json`);
         const data = await response.json();
-        console.log(data);
+       // console.log(response);
 
         if(data){
           const {description, title, covers, subject_places, subject_times, subjects} = data;
